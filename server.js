@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/", (req, res)=>res.send("welcome to the api"))
+app.get("/", (req, res) => res.send("welcome to the api"));
 
 app.post("/solve", (req, res) => {
   try {
@@ -44,6 +44,6 @@ app.post("/solve", (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("Server is up and runign");
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Server is up and runign on port " + process.env.PORT || 3000);
 });
