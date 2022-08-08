@@ -27,7 +27,7 @@ app.post("/solve", (req, res) => {
 
     arr.forEach((element) => {
       if (parseInt(element) == element) numbers.push(element);
-      if (element.length === 1 && element.match(/[a-z]/i))
+      if (element.match(/[a-z]/i))
         alphabets.push(element);
     });
 
