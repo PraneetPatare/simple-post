@@ -7,6 +7,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => res.send("welcome to the api"));
 
+app.get("/solve", (req, res) => res.send(sendApi));
+
 app.post("/solve", (req, res) => {
   try {
     let arr = req.body.array;
@@ -29,9 +31,9 @@ app.post("/solve", (req, res) => {
         alphabets.push(element);
     });
 
-    res.json({
+    let sendApi=res.json({
       status: true,
-      name: "Vedant Daigavane",
+      name: "Praneet Patare",
       count: numbers.length + alphabets.length,
       numbers,
       alphabets,
