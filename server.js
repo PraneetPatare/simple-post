@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => res.send("welcome to the api"));
 
-app.get("/solve", (req, res) => res.send(sendApi));
+//app.get("/solve", (req, res) => res.send(sendApi));
 
 app.post("/solve", (req, res) => {
   try {
